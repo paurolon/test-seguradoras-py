@@ -6,56 +6,52 @@
 <title>Aseguradoras Paraguay</title>
 <style>
   * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: #0f1115;
-    color: #e6e8ec;
-    -webkit-font-smoothing: antialiased;
-  }
-  header {
-    background: linear-gradient(180deg, #111418 0%, #1a1f27 100%);
-    padding: 20px 16px 24px;
-    border-bottom: 1px solid #262a33;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  header h1 { margin: 0 0 4px; font-size: 22px; font-weight: 700; }
-  header .subtitle { color: #8b93a3; font-size: 13px; margin-bottom: 14px; }
-  .stats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
-  .stat { background: #1a1f27; border: 1px solid #262a33; border-radius: 10px; padding: 8px 12px; font-size: 12px; color: #c6cbd6; display: flex; gap: 6px; align-items: center; }
-  .stat b { color: #fff; font-size: 14px; }
-  .filters { display: flex; gap: 8px; flex-wrap: wrap; }
-  .filters select { background: #1a1f27; color: #e6e8ec; border: 1px solid #2b303a; border-radius: 10px; padding: 8px 10px; font-size: 13px; outline: none; }
-  main { padding: 16px; max-width: 900px; margin: 0 auto; }
-  .card { background: #161a21; border: 1px solid #262a33; border-radius: 14px; padding: 14px; margin-bottom: 12px; display: flex; flex-direction: column; gap: 10px; }
-  .card.hidden { display: none; }
-  .row-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
-  .name-wrap { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
-  .name { font-size: 15px; font-weight: 600; color: #fff; line-height: 1.25; }
-  .num { color: #6a7182; font-size: 11px; font-weight: 500; }
-  .phone { color: #aab2c0; font-size: 13px; }
-  .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
-  .badge { font-size: 11px; padding: 3px 8px; border-radius: 999px; font-weight: 600; }
-  .badge.caucion-si { background: #0f3a22; color: #5dd39e; border: 1px solid #1e5b38; }
-  .badge.caucion-no { background: #2a2630; color: #b2a8c0; border: 1px solid #3a3446; }
-  .call-btn { background: #2f6fed; color: #fff; border: none; width: 44px; height: 44px; border-radius: 12px; font-size: 18px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .call-btn:hover { background: #4a82f0; }
-  .call-btn.disabled { background: #2a2f38; color: #6a7182; cursor: not-allowed; pointer-events: none; }
-  .controls { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; border-top: 1px solid #222631; }
-  .control-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .control-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #7b8294; min-width: 74px; }
-  .seg { display: inline-flex; background: #0f1218; border: 1px solid #262a33; border-radius: 10px; padding: 2px; gap: 2px; flex-wrap: wrap; }
-  .seg button { background: transparent; color: #c6cbd6; border: none; padding: 6px 10px; font-size: 12px; border-radius: 8px; cursor: pointer; font-weight: 500; }
-  .seg button:hover { background: #1c2129; }
-  .seg button.active { background: #2f6fed; color: #fff; }
-  .seg button.active.variant-green { background: #1e7a44; }
-  .seg button.active.variant-orange { background: #b56617; }
-  .seg button.active.variant-gray { background: #4a505c; }
-  .empty { text-align: center; color: #7b8294; padding: 40px 12px; font-size: 13px; }
-  footer { text-align: center; color: #5b6271; font-size: 11px; padding: 24px 16px 40px; }
+  html, body { margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:#0f1115; color:#e6e8ec; -webkit-font-smoothing:antialiased; }
+  header { background:linear-gradient(180deg,#111418 0%,#1a1f27 100%); padding:20px 16px 24px; border-bottom:1px solid #262a33; position:sticky; top:0; z-index:10; }
+  header h1 { margin:0 0 4px; font-size:22px; font-weight:700; letter-spacing:-0.01em; }
+  header .subtitle { color:#8b93a3; font-size:13px; margin-bottom:14px; }
+  .stats { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+  .stat { background:#1a1f27; border:1px solid #262a33; border-radius:10px; padding:8px 12px; font-size:12px; color:#c6cbd6; display:flex; gap:6px; align-items:center; }
+  .stat b { color:#fff; font-size:14px; }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; }
+  .filters select { background:#1a1f27; color:#e6e8ec; border:1px solid #2b303a; border-radius:10px; padding:8px 10px; font-size:13px; outline:none; }
+  .filters select:focus { border-color:#4c8bf5; }
+  main { padding:16px; max-width:900px; margin:0 auto; }
+  .card { background:#161a21; border:1px solid #262a33; border-radius:14px; padding:14px; margin-bottom:12px; display:flex; flex-direction:column; gap:10px; }
+  .card.hidden { display:none; }
+  .row-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .name-wrap { display:flex; flex-direction:column; gap:4px; min-width:0; flex:1; }
+  .name { font-size:15px; font-weight:600; color:#fff; line-height:1.25; }
+  .num { color:#6a7182; font-size:11px; font-weight:500; }
+  .phone { color:#aab2c0; font-size:13px; font-variant-numeric:tabular-nums; }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; margin-top:2px; }
+  .badge { font-size:11px; padding:3px 8px; border-radius:999px; font-weight:600; letter-spacing:0.02em; }
+  .badge.caucion-si { background:#0f3a22; color:#5dd39e; border:1px solid #1e5b38; }
+  .badge.caucion-no { background:#2a2630; color:#b2a8c0; border:1px solid #3a3446; }
+  .call-btn { background:#2f6fed; color:#fff; border:none; width:44px; height:44px; border-radius:12px; font-size:18px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.12s; }
+  .call-btn:hover { background:#4a82f0; }
+  .call-btn.disabled { background:#2a2f38; color:#6a7182; cursor:not-allowed; pointer-events:none; }
+  .controls { display:flex; flex-direction:column; gap:8px; padding-top:8px; border-top:1px solid #222631; }
+  .control-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .control-label { font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:#7b8294; min-width:74px; }
+  .seg { display:inline-flex; background:#0f1218; border:1px solid #262a33; border-radius:10px; padding:2px; gap:2px; flex-wrap:wrap; }
+  .seg button { background:transparent; color:#c6cbd6; border:none; padding:6px 10px; font-size:12px; border-radius:8px; cursor:pointer; font-weight:500; transition:background 0.12s,color 0.12s; }
+  .seg button:hover { background:#1c2129; }
+  .seg button.active { background:#2f6fed; color:#fff; }
+  .seg button.active.variant-green  { background:#1e7a44; }
+  .seg button.active.variant-orange { background:#b56617; }
+  .seg button.active.variant-gray   { background:#4a505c; }
+  .seg button.active.variant-teal   { background:#177a73; }
+  .seg button.active.variant-red    { background:#8b1c1c; }
+  .seg button.active.variant-yellow { background:#7a6010; }
+  .comment-row { display:flex; align-items:flex-start; gap:8px; flex-wrap:nowrap; }
+  .comment-row .control-label { padding-top:8px; flex-shrink:0; }
+  .comment-input { flex:1; background:#0f1218; border:1px solid #262a33; border-radius:10px; color:#e6e8ec; font-size:12px; font-family:inherit; padding:7px 10px; resize:vertical; min-height:36px; max-height:120px; outline:none; transition:border-color 0.12s; }
+  .comment-input:focus { border-color:#4c8bf5; }
+  .comment-input::placeholder { color:#4a505c; }
+  .empty { text-align:center; color:#7b8294; padding:40px 12px; font-size:13px; }
+  footer { text-align:center; color:#5b6271; font-size:11px; padding:24px 16px 40px; }
+  @media (min-width:600px) { header h1 { font-size:26px; } .name { font-size:16px; } }
 </style>
 </head>
 <body>
@@ -74,6 +70,12 @@
       <option value="si">Contactadas</option>
       <option value="no">Pendientes</option>
     </select>
+    <select id="f-status">
+      <option value="">Status: Todos</option>
+      <option value="esperando">Esperando su respuesta</option>
+      <option value="tarea-mia">Tarea de mi lado</option>
+      <option value="sin-status">Sin status</option>
+    </select>
     <select id="f-poliza">
       <option value="">Póliza: Todas</option>
       <option value="no-tiene">No tiene</option>
@@ -88,98 +90,117 @@
   <div id="list"></div>
   <div class="empty" id="empty" style="display:none;">Ninguna aseguradora coincide con los filtros.</div>
 </main>
-<footer>v4 · datos en localStorage (<code>aseg-v3</code>)</footer>
+<footer>v5 · datos en localStorage (<code>aseg-v3</code>)</footer>
 <script>
   const DATA = [
-    { id: 1,  nombre: "Mapfre Paraguay",         telRaw: "(021) 217 6000", caucion: true  },
-    { id: 2,  nombre: "Aseguradora del Este",    telRaw: "(021) 616 5000", caucion: true  },
-    { id: 3,  nombre: "Aseguradora Yacyretá",    telRaw: "(021) 617 8000", caucion: true  },
-    { id: 4,  nombre: "La Consolidada",          telRaw: "(021) 619 1503", caucion: true  },
-    { id: 5,  nombre: "Aseguradora Tajy",        telRaw: "(021) 689 1000", caucion: true  },
-    { id: 6,  nombre: "Patria Seguros",          telRaw: "(021) 225 250",  caucion: true  },
-    { id: 7,  nombre: "Alianza Garantía",        telRaw: "(021) 445 452",  caucion: true  },
-    { id: 8,  nombre: "Royal Seguros",           telRaw: "(021) 609 800",  caucion: true  },
-    { id: 9,  nombre: "Sancor Paraguay",         telRaw: "(021) 620 8000", caucion: true  },
-    { id: 10, nombre: "El Sol del Paraguay",     telRaw: "(021) 236 3000", caucion: true  },
-    { id: 11, nombre: "Cenit",                   telRaw: "(021) 492 811",  caucion: true  },
-    { id: 12, nombre: "Itaú Seguros",            telRaw: "(021) 617 1818", caucion: false },
-    { id: 13, nombre: "Seguridad Seguros",       telRaw: "(021) 249 1000", caucion: false },
-    { id: 14, nombre: "La Rural",                telRaw: "(021) 617 4000", caucion: false },
-    { id: 15, nombre: "Familiar Seguros",        telRaw: "(021) 657 8100", caucion: false },
-    { id: 16, nombre: "Regional",                telRaw: "(071) 203 700",  caucion: false },
-    { id: 17, nombre: "Panal",                   telRaw: "(021) 439 1000", caucion: false },
-    { id: 18, nombre: "Rumbos",                  telRaw: "(021) 449 488",  caucion: false },
-    { id: 19, nombre: "Fénix",                   telRaw: "(021) 495 549",  caucion: false },
-    { id: 20, nombre: "Aseguradora Paraguaya",   telRaw: "(021) 612 870",  caucion: false },
-    { id: 21, nombre: "Nobleza",                 telRaw: "(021) 600 272",  caucion: false },
-    { id: 22, nombre: "El Comercio Paraguayo",   telRaw: "(021) 492 324",  caucion: false },
-    { id: 23, nombre: "Central",                 telRaw: "(021) 623 810",  caucion: false },
-    { id: 24, nombre: "Atlas de Seguros",        telRaw: "(021) 217 5050", caucion: false },
-    { id: 25, nombre: "El Productor",            telRaw: "(021) 491 577",  caucion: false },
-    { id: 26, nombre: "La Agrícola",             telRaw: "(021) 609 509",  caucion: false },
-    { id: 27, nombre: "La Independencia",        telRaw: "(021) 447 021",  caucion: false },
-    { id: 28, nombre: "La Paraguaya",            telRaw: "(021) 230 028",  caucion: false },
-    { id: 29, nombre: "Ueno Seguros (ex Alfa)",  telRaw: "(021) 449 991",  caucion: false },
-    { id: 30, nombre: "La Meridional Paraguaya", telRaw: "(021) 498 827",  caucion: false },
-    { id: 31, nombre: "Seguros Chaco",           telRaw: "(021) 605 600",  caucion: false },
-    { id: 32, nombre: "SEGESA",                  telRaw: "(021) 491 362",  caucion: false },
-    { id: 33, nombre: "Atalaya Seguros",         telRaw: "(021) 492 811",  caucion: false },
-    { id: 34, nombre: "Intercontinental",        telRaw: "(021) 591 271",  caucion: false },
-    { id: 35, nombre: "Tu Seguros",              telRaw: null,             caucion: false }
+    { id:1,  nombre:"Mapfre Paraguay",         telRaw:"(021) 217 6000", caucion:true  },
+    { id:2,  nombre:"Aseguradora del Este",    telRaw:"(021) 616 5000", caucion:true  },
+    { id:3,  nombre:"Aseguradora Yacyretá",    telRaw:"(021) 617 8000", caucion:true  },
+    { id:4,  nombre:"La Consolidada",          telRaw:"(021) 619 1503", caucion:true  },
+    { id:5,  nombre:"Aseguradora Tajy",        telRaw:"(021) 689 1000", caucion:true  },
+    { id:6,  nombre:"Patria Seguros",          telRaw:"(021) 225 250",  caucion:true  },
+    { id:7,  nombre:"Alianza Garantía",        telRaw:"(021) 445 452",  caucion:true  },
+    { id:8,  nombre:"Royal Seguros",           telRaw:"(021) 609 800",  caucion:true  },
+    { id:9,  nombre:"Sancor Paraguay",         telRaw:"(021) 620 8000", caucion:true  },
+    { id:10, nombre:"El Sol del Paraguay",     telRaw:"(021) 236 3000", caucion:true  },
+    { id:11, nombre:"Cenit",                   telRaw:"(021) 492 811",  caucion:true  },
+    { id:12, nombre:"Itaú Seguros",            telRaw:"(021) 617 1818", caucion:false },
+    { id:13, nombre:"Seguridad Seguros",       telRaw:"(021) 249 1000", caucion:false },
+    { id:14, nombre:"La Rural",                telRaw:"(021) 617 4000", caucion:false },
+    { id:15, nombre:"Familiar Seguros",        telRaw:"(021) 657 8100", caucion:false },
+    { id:16, nombre:"Regional",                telRaw:"(071) 203 700",  caucion:false },
+    { id:17, nombre:"Panal",                   telRaw:"(021) 439 1000", caucion:false },
+    { id:18, nombre:"Rumbos",                  telRaw:"(021) 449 488",  caucion:false },
+    { id:19, nombre:"Fénix",                   telRaw:"(021) 495 549",  caucion:false },
+    { id:20, nombre:"Aseguradora Paraguaya",   telRaw:"(021) 612 870",  caucion:false },
+    { id:21, nombre:"Nobleza",                 telRaw:"(021) 600 272",  caucion:false },
+    { id:22, nombre:"El Comercio Paraguayo",   telRaw:"(021) 492 324",  caucion:false },
+    { id:23, nombre:"Central",                 telRaw:"(021) 623 810",  caucion:false },
+    { id:24, nombre:"Atlas de Seguros",        telRaw:"(021) 217 5050", caucion:false },
+    { id:25, nombre:"El Productor",            telRaw:"(021) 491 577",  caucion:false },
+    { id:26, nombre:"La Agrícola",             telRaw:"(021) 609 509",  caucion:false },
+    { id:27, nombre:"La Independencia",        telRaw:"(021) 447 021",  caucion:false },
+    { id:28, nombre:"La Paraguaya",            telRaw:"(021) 230 028",  caucion:false },
+    { id:29, nombre:"Ueno Seguros (ex Alfa)",  telRaw:"(021) 449 991",  caucion:false },
+    { id:30, nombre:"La Meridional Paraguaya", telRaw:"(021) 498 827",  caucion:false },
+    { id:31, nombre:"Seguros Chaco",           telRaw:"(021) 605 600",  caucion:false },
+    { id:32, nombre:"SEGESA",                  telRaw:"(021) 491 362",  caucion:false },
+    { id:33, nombre:"Atalaya Seguros",         telRaw:"(021) 492 811",  caucion:false },
+    { id:34, nombre:"Intercontinental",        telRaw:"(021) 591 271",  caucion:false },
+    { id:35, nombre:"Tu Seguros",              telRaw:null,             caucion:false }
   ];
   const STORAGE_KEY = "aseg-v3";
-  function loadState() { try { const r = localStorage.getItem(STORAGE_KEY); return r ? JSON.parse(r) : {}; } catch(e) { return {}; } }
-  function saveState(s) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e) {} }
+  function loadState() { try { const r=localStorage.getItem(STORAGE_KEY); return r?JSON.parse(r):{} } catch(e){return{}} }
+  function saveState(s) { try { localStorage.setItem(STORAGE_KEY,JSON.stringify(s)) } catch(e){} }
   let state = loadState();
-  function toTelLink(raw) { if (!raw) return null; const d = raw.replace(/\D/g,""); if (!d) return null; return "+595" + (d.startsWith("0") ? d.slice(1) : d); }
-  function getRow(id) { return state[id] || {}; }
-  function setRow(id, patch) { state[id] = Object.assign({}, state[id]||{}, patch); saveState(state); renderStats(); applyFilters(); }
+  function toTelLink(raw) { if(!raw)return null; const d=raw.replace(/\D/g,""); if(!d)return null; return "+595"+(d.startsWith("0")?d.slice(1):d); }
+  function getRow(id) { return state[id]||{}; }
+  function setRow(id,patch) { state[id]=Object.assign({},state[id]||{},patch); saveState(state); renderStats(); applyFilters(); }
+  const STATUS_OPTIONS = [
+    { key:"esperando", label:"⏳ Esperando su respuesta", variant:"variant-yellow" },
+    { key:"tarea-mia", label:"✏️ Tarea de mi lado",       variant:"variant-teal"   }
+  ];
   const POLIZA_OPTIONS = [
-    { key:"no-tiene", label:"No tiene", variant:"variant-gray" },
-    { key:"con-caucion", label:"Con caución", variant:"" },
-    { key:"si", label:"Sí", variant:"variant-green" },
+    { key:"no-tiene",    label:"No tiene",       variant:"variant-red"    },
+    { key:"con-caucion", label:"Con caución",    variant:""               },
+    { key:"si",          label:"Sí",             variant:"variant-green"  },
     { key:"mandar-docs", label:"Mandar docs 📄", variant:"variant-orange" }
   ];
   function cardHTML(item) {
-    const tel = toTelLink(item.telRaw);
-    const row = getRow(item.id);
-    const contactado = row.contactado || "";
-    const poliza = row.poliza || "";
-    const callBtn = tel ? `<a class="call-btn" href="tel:${tel}">📞</a>` : `<span class="call-btn disabled">📞</span>`;
-    const contactoBtns = `<button data-action="contactado" data-id="${item.id}" data-value="si" class="${contactado==="si"?"active variant-green":""}">Sí</button><button data-action="contactado" data-id="${item.id}" data-value="no" class="${contactado==="no"?"active variant-gray":""}">No</button>`;
-    const polizaBtns = POLIZA_OPTIONS.map(opt => `<button data-action="poliza" data-id="${item.id}" data-value="${opt.key}" class="${poliza===opt.key?"active "+opt.variant:""}">${opt.label}</button>`).join("");
-    return `<div class="card" data-id="${item.id}" data-caucion="${item.caucion?"si":"no"}" data-contactado="${contactado||"ninguno"}" data-poliza="${poliza||"sin-estado"}"><div class="row-top"><div class="name-wrap"><div class="num">#${item.id}</div><div class="name">${item.nombre}</div><div class="phone">${item.telRaw||"Sin número"}</div><div class="badges"><span class="badge ${item.caucion?"caucion-si":"caucion-no"}">${item.caucion?"✓ Caución":"Sin info"}</span></div></div>${callBtn}</div><div class="controls"><div class="control-row"><span class="control-label">Contactado</span><div class="seg">${contactoBtns}</div></div><div class="control-row"><span class="control-label">Póliza</span><div class="seg">${polizaBtns}</div></div></div></div>`;
+    const tel=toTelLink(item.telRaw), row=getRow(item.id);
+    const contactado=row.contactado||"", status=row.status||"", poliza=row.poliza||"", comment=row.comment||"";
+    const callBtn=tel?`<a class="call-btn" href="tel:${tel}">📞</a>`:`<span class="call-btn disabled">📞</span>`;
+    const contactoBtns=`<button data-action="contactado" data-id="${item.id}" data-value="si" class="${contactado==="si"?"active variant-green":""}">Sí</button><button data-action="contactado" data-id="${item.id}" data-value="no" class="${contactado==="no"?"active variant-gray":""}">No</button>`;
+    const statusBtns=STATUS_OPTIONS.map(o=>`<button data-action="status" data-id="${item.id}" data-value="${o.key}" class="${status===o.key?"active "+o.variant:""}">${o.label}</button>`).join("");
+    const polizaBtns=POLIZA_OPTIONS.map(o=>`<button data-action="poliza" data-id="${item.id}" data-value="${o.key}" class="${poliza===o.key?"active "+o.variant:""}">${o.label}</button>`).join("");
+    const safe=comment.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+    return `<div class="card" data-id="${item.id}" data-caucion="${item.caucion?"si":"no"}" data-contactado="${contactado||"ninguno"}" data-status="${status||"sin-status"}" data-poliza="${poliza||"sin-estado"}">
+      <div class="row-top"><div class="name-wrap"><div class="num">#${item.id}</div><div class="name">${item.nombre}</div><div class="phone">${item.telRaw||"Sin número"}</div><div class="badges"><span class="badge ${item.caucion?"caucion-si":"caucion-no"}">${item.caucion?"✓ Caución":"Sin info"}</span></div></div>${callBtn}</div>
+      <div class="controls">
+        <div class="control-row"><span class="control-label">Contactado</span><div class="seg">${contactoBtns}</div></div>
+        <div class="control-row"><span class="control-label">Status</span><div class="seg">${statusBtns}</div></div>
+        <div class="control-row"><span class="control-label">Póliza</span><div class="seg">${polizaBtns}</div></div>
+        <div class="comment-row"><span class="control-label">Nota</span><textarea class="comment-input" data-id="${item.id}" placeholder="Agregar comentario..." rows="1">${safe}</textarea></div>
+      </div></div>`;
   }
-  function renderList() { document.getElementById("list").innerHTML = DATA.map(cardHTML).join(""); }
+  function renderList() { document.getElementById("list").innerHTML=DATA.map(cardHTML).join(""); }
   function renderStats() {
-    let contactadas=0, conPoliza=0, mandarDocs=0, conCaucion=0;
-    DATA.forEach(it => { if(it.caucion) conCaucion++; const r=getRow(it.id); if(r.contactado==="si") contactadas++; if(r.poliza==="si") conPoliza++; if(r.poliza==="mandar-docs") mandarDocs++; });
-    document.getElementById("stats").innerHTML = `<div class="stat">Total <b>${DATA.length}</b></div><div class="stat">Caución <b>${conCaucion}</b></div><div class="stat">Contactadas <b>${contactadas}</b></div><div class="stat">Con póliza <b>${conPoliza}</b></div><div class="stat">Mandar docs <b>${mandarDocs}</b></div>`;
+    let contactadas=0,conPoliza=0,esperando=0,tareaMia=0,conCaucion=0;
+    DATA.forEach(it=>{ if(it.caucion)conCaucion++; const r=getRow(it.id); if(r.contactado==="si")contactadas++; if(r.poliza==="si")conPoliza++; if(r.status==="esperando")esperando++; if(r.status==="tarea-mia")tareaMia++; });
+    document.getElementById("stats").innerHTML=`<div class="stat">Total <b>${DATA.length}</b></div><div class="stat">Caución <b>${conCaucion}</b></div><div class="stat">Contactadas <b>${contactadas}</b></div><div class="stat">Con póliza <b>${conPoliza}</b></div><div class="stat">⏳ Esperando <b>${esperando}</b></div><div class="stat">✏️ Mi tarea <b>${tareaMia}</b></div>`;
   }
   function applyFilters() {
-    const fC=document.getElementById("f-caucion").value, fCt=document.getElementById("f-contactado").value, fP=document.getElementById("f-poliza").value;
+    const fC=document.getElementById("f-caucion").value, fCt=document.getElementById("f-contactado").value, fSt=document.getElementById("f-status").value, fP=document.getElementById("f-poliza").value;
     let v=0;
-    document.querySelectorAll(".card").forEach(card => {
+    document.querySelectorAll(".card").forEach(card=>{
       let show=true;
-      if(fC && card.dataset.caucion!==fC) show=false;
-      if(fCt==="si" && card.dataset.contactado!=="si") show=false;
-      if(fCt==="no" && card.dataset.contactado==="si") show=false;
-      if(fP && card.dataset.poliza!==fP) show=false;
+      if(fC&&card.dataset.caucion!==fC)show=false;
+      if(fCt==="si"&&card.dataset.contactado!=="si")show=false;
+      if(fCt==="no"&&card.dataset.contactado==="si")show=false;
+      if(fSt&&card.dataset.status!==fSt)show=false;
+      if(fP&&card.dataset.poliza!==fP)show=false;
       card.classList.toggle("hidden",!show);
-      if(show) v++;
+      if(show)v++;
     });
     document.getElementById("empty").style.display=v===0?"block":"none";
   }
-  document.addEventListener("click", e => {
-    const btn=e.target.closest("button[data-action]"); if(!btn) return;
-    const id=parseInt(btn.dataset.id,10), action=btn.dataset.action, value=btn.dataset.value;
+  document.addEventListener("click",e=>{
+    const btn=e.target.closest("button[data-action]"); if(!btn)return;
+    const id=parseInt(btn.dataset.id,10),action=btn.dataset.action,value=btn.dataset.value;
     const next=getRow(id)[action]===value?"":value;
     setRow(id,{[action]:next});
     const card=document.querySelector(`.card[data-id="${id}"]`);
-    if(card) card.outerHTML=cardHTML(DATA.find(d=>d.id===id));
+    if(card)card.outerHTML=cardHTML(DATA.find(d=>d.id===id));
     applyFilters();
   });
-  ["f-caucion","f-contactado","f-poliza"].forEach(id => document.getElementById(id).addEventListener("change",applyFilters));
+  let commentTimers={};
+  document.addEventListener("input",e=>{
+    const ta=e.target.closest("textarea.comment-input"); if(!ta)return;
+    const id=parseInt(ta.dataset.id,10);
+    clearTimeout(commentTimers[id]);
+    commentTimers[id]=setTimeout(()=>setRow(id,{comment:ta.value}),500);
+  });
+  ["f-caucion","f-contactado","f-status","f-poliza"].forEach(fid=>document.getElementById(fid).addEventListener("change",applyFilters));
   renderList(); renderStats(); applyFilters();
 </script>
 </body>
